@@ -1,0 +1,29 @@
+{
+  "name": "bluenile-e-commerce",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "bluenile-ecommmerce-backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacobbayisa/bluenile-e-commerce.git"
+  },
+  "author": "Jacob Bayisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacobbayisa/bluenile-e-commerce/issues"
+  },
+  "homepage": "https://github.com/Jacobbayisa/bluenile-e-commerce#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11",
+    "nodemon": "^2.0.7"
+  }
+}
