@@ -19,7 +19,7 @@ function App() {
           </div>
         </header>
         <main>
-          <Route path="/product/:id" component={Productspage}></Route>
+          <Route path="/products" component={Productspage}></Route>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
