@@ -3,12 +3,14 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
 }
+html .font-link {
+  font-family: "Lato", cursive, Helvetica;
+}
 
 body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  font-family: Helvetica, sans-serif, Arial;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 250, 250, 0.4)), to(rgba(255, 0, 150, 0.3))), url("nile.jpg");
   background: linear-gradient(0deg, rgba(255, 250, 250, 0.4), rgba(255, 0, 150, 0.3)), url("nile.jpg");
   background-position: center;
@@ -32,6 +34,15 @@ header {
   grid-area: header;
   background-color: rgba(25, 118, 210, 0.5);
   color: #fff;
+  width: 100vw;
+  position: fixed;
+  height: 7rem;
+}
+
+.headerBackground {
+  background-color: #000;
+  position: fixed;
+  height: 7rem;
 }
 
 main {
@@ -44,6 +55,59 @@ footer {
   grid-area: footer;
   background-color: rgba(39, 44, 52, 0.5);
   color: #fff;
+}
+
+/* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+
+button.primary {
+  background-color: #f0c040;
+}
+
+button.block {
+  width: 100%;
 }
 
 /* Header */
@@ -66,12 +130,20 @@ a.brand {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-right: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.row.active {
+  background-color: #000;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 .row.center {
@@ -84,6 +156,18 @@ a.brand {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+}
+
+.col-2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 50rem;
+          flex: 2 1 50rem;
 }
 
 /* Image */
@@ -106,5 +190,53 @@ img.large {
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+/* Rating */
+.rating span {
+  color: #f07a44;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #404040;
+}
+
+/* Alert */
+.success {
+  color: #20a020;
+}
+
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
 }
 /*# sourceMappingURL=app.css.map */

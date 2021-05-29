@@ -1,13 +1,25 @@
 import Productspage from "./pages/productspage";
 import HomePage from "./pages/homepage";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./app.css";
 
 function App() {
+  const [headerBackground, setHeaderBackground] = useState(false);
+
+  const scrollHandler = () => {
+    if (window.scrollY > 10) {
+      setHeaderBackground(true);
+    } else {
+      setHeaderBackground(false);
+    }
+  };
+
+  window.addEventListener("scroll", scrollHandler);
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className={headerBackground ? "row active" : "row"}>
           <div>
             <Link className="brand" to="/">
               BlueNile
