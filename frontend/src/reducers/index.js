@@ -1,5 +1,6 @@
-const reducers = () => {
+import { combineReducers } from "redux";
+import { productListReducer } from "./productReducer";
 
-}
-
-export default reducers;
+export default combineReducers({
+  productList: productListReducer,
+});

@@ -3,30 +3,59 @@ import axios from "axios";
 import Product from "../components/Product";
 
 const Productspage = () => {
-  const [products, setProducts] = useState();
-
-  useEffect(() => {
-    try {
-      axios.get("http://localhost:8000/api/products").then((res) => {
-        setProducts(res.data);
-        console.log();
-      });
-    } catch (err) {
-      console.log(err + "There is erro on server");
-    }
-  }, []);
-  console.log(products.isArray());
-  const names = ["jacob", "Tamirat", "Michael", "sara"];
-  console.log(typeof products);
-  // const pro = products.map((product) => {
-  //   console.log(product.type);
-  // });
   return (
     <div>
-      {/* {products &&
-        products.map((product) => {
-          return <Product image={product.image}></Product>;
-        })} */}
+      {/* <Link to="/">Back to result</Link>
+      <div className="row top">
+        <div className="col-2">
+          <img className="large" src={product.image} alt={product.name}></img>
+        </div>
+        <div className="col-1">
+          <ul>
+            <li>
+              <h1>{product.name}</h1>
+            </li>
+            <li>
+              <Rating
+                rating={product.rating}
+                numReviews={product.numReviews}
+              ></Rating>
+            </li>
+            <li>Pirce : ${product.price}</li>
+            <li>
+              Description:
+              <p>{product.description}</p>
+            </li>
+          </ul>
+        </div>
+        <div className="col-1">
+          <div className="card card-body">
+            <ul>
+              <li>
+                <div className="row">
+                  <div>Price</div>
+                  <div className="price">${product.price}</div>
+                </div>
+              </li>
+              <li>
+                <div className="row">
+                  <div>Status</div>
+                  <div>
+                    {product.countInStock > 0 ? (
+                      <span className="success">In Stock</span>
+                    ) : (
+                      <span className="danger">Unavailable</span>
+                    )}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <button className="primary block">Add to Cart</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };

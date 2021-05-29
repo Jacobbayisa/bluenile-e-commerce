@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api/products", async (req, res) => {
-  res.send(data);
+  res.send(data.products);
 });
 
 const PORT = process.env.PORT || 8000;
