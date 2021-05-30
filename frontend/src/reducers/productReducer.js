@@ -6,7 +6,7 @@ import {
 
 const initStsate = { products: [] };
 
-export const productListReducer = (state = initStsate, action) => {
+const productListReducer = (state = initStsate, action) => {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { loading: true };
@@ -18,3 +18,5 @@ export const productListReducer = (state = initStsate, action) => {
       return state;
   }
 };
+
+export default productListReducer;

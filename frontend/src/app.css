@@ -1,6 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 html .font-link {
@@ -11,8 +11,20 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 250, 250, 0.4)), to(rgba(255, 0, 150, 0.3))), url("nile.jpg");
-  background: linear-gradient(0deg, rgba(255, 250, 250, 0.4), rgba(255, 0, 150, 0.3)), url("nile.jpg");
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(255, 250, 250, 0.4)),
+      to(rgba(255, 0, 150, 0.3))
+    ),
+    url("nile.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(255, 250, 250, 0.4),
+      rgba(255, 0, 150, 0.3)
+    ),
+    url("nile.jpg");
   background-position: center;
   background-repeat: none;
   background-size: cover;
@@ -57,6 +69,13 @@ footer {
   color: #fff;
 }
 
+.products-container {
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+  justify-content: space-evenly;
+  margin: auto;
+}
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -84,6 +103,26 @@ ul {
 
 li {
   margin-top: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.1rem #404040 solid;
 }
 
 button {
@@ -129,14 +168,14 @@ a.brand {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-right: 20px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
@@ -148,31 +187,40 @@ a.brand {
 
 .row.center {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .row.top {
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .col-1 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 25rem;
-          flex: 1 1 25rem;
+  -ms-flex: 1 1 25rem;
+  flex: 1 1 25rem;
 }
 
 .col-2 {
   -webkit-box-flex: 2;
-      -ms-flex: 2 1 50rem;
-          flex: 2 1 50rem;
+  -ms-flex: 2 1 50rem;
+  flex: 2 1 50rem;
+}
+
+.min-30 {
+  min-width: 30rem;
 }
 
 /* Image */
 img {
   border-radius: 0.5rem;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 
 img.medium {
