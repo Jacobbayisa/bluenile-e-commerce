@@ -54,6 +54,7 @@ header {
 main {
   grid-area: main;
   padding: 1fr;
+  padding-top: 5vh;
   background: rgba(255, 255, 255, 1);
 }
 footer {
@@ -61,6 +62,11 @@ footer {
   background-color: rgba(39, 44, 52, 0.5);
   color: #fff;
 }
+
+.products-container {
+  margin: 3rem;
+}
+
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -165,17 +171,17 @@ a.brand {
 /* Image */
 img {
   border-radius: 0.5rem;
-}
-img.small {
-  max-width: 5rem;
-  width: 100%;
-}
-img.medium {
-  max-width: 29rem;
-  width: 100%;
-}
-img.large {
-  width: 100%;
+  &.small {
+    max-width: 5rem;
+    width: 100%;
+  }
+  &.medium {
+    max-width: 29rem;
+    width: 100%;
+  }
+  &.large {
+    width: 40vw;
+  }
 }
 
 /* Card */
@@ -184,6 +190,10 @@ img.large {
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
+  &.list {
+    width: 20vw;
+    min-width: 320px;
+  }
 }
 
 .card-body {

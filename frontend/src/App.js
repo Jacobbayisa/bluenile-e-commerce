@@ -1,5 +1,5 @@
-import Productspage from "./pages/productspage";
-import HomePage from "./pages/homepage";
+import ProductDetailsPage from "./pages/productDetailsPage";
+import ProductListPage from "./pages/productListPage";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import "./app.css";
@@ -31,8 +31,8 @@ function App() {
           </div>
         </header>
         <main>
-          <Route path="/product/:id" component={Productspage}></Route>
-          <Route path="/" component={HomePage} exact></Route>
+          <Route path="/product/:id" component={ProductDetailsPage}></Route>
+          <Route path="/" component={ProductListPage} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
       </div>

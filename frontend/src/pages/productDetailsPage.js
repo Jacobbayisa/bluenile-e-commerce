@@ -10,20 +10,20 @@ const Productspage = (props) => {
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
   const productId = props.match.params.id;
-  console.log("This is details of product" + detailsOfProduct);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(detailsOfProduct(productId));
   }, [dispatch, productId]);
+
   return (
-    <div class="products-container">
+    <div>
       {loading ? (
         <LoadingBox> </LoadingBox>
       ) : error ? (
         <MessageBox variant="danger"> {error} </MessageBox>
       ) : (
-        <div>
+        <div class="products-container">
           <Link to="/"> Back to result </Link>
           <div className="row top">
             <div className="col-2">

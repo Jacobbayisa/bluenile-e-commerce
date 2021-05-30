@@ -5,9 +5,19 @@ import { Link } from "react-router-dom";
 const Product = (props) => {
   const { product } = props;
   return (
-    <div key={product._id} className="card">
+    <div key={product._id} className="card list">
       <Link to={`/product/${product._id}`}>
-        <img className="medium" src={product.image} alt={product.name} />
+        <div
+          style={{
+            width: "100%",
+            height: "200px",
+            background: `url(${product.image})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "none",
+            backgroundPosition: "center",
+          }}
+        ></div>
+        {/* <img className="medium" src={product.image} alt={product.name} /> */}
       </Link>
       <div className="card-body">
         <Link to={`/product/${product._id}`}>
