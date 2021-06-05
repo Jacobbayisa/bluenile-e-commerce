@@ -28,7 +28,7 @@ const Productspage = (props) => {
       ) : error ? (
         <MessageBox variant="danger"> {error} </MessageBox>
       ) : (
-        <div class="products-container">
+        <div className="products-container">
           <Link to="/"> Back to result </Link>
           <div className="row top">
             <div className="col-2">

@@ -2,16 +2,15 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import data from "./data.js";
-dotenv.config();
 
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/api/products/:id", (req, res) => {
+app.get("/api/products/:id", async (req, res) => {
   const product = data.products.find((x) => x._id === req.params.id);
-  console.log(product);
   if (product) {
     res.send(product);
   } else {
