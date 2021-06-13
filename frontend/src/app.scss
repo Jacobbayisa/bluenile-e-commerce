@@ -176,7 +176,7 @@ a.brand {
   flex: 2 1 50rem;
 }
 .min-30 {
-  min-width: 30rem;
+  min-width: 15vw;
 }
 /* Image */
 img {
@@ -186,7 +186,7 @@ img {
     width: 100%;
   }
   &.medium {
-    max-width: 29rem;
+    max-width: 20vw;
     width: 100%;
   }
   &.large {
@@ -243,4 +243,9 @@ img {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0;
+}
+
+.cart-container {
+  padding: 0 5vw;
+  align-items: center;
 }

@@ -208,7 +208,7 @@ a.brand {
 }
 
 .min-30 {
-  min-width: 30rem;
+  min-width: 15vw;
 }
 
 /* Image */
@@ -220,7 +220,7 @@ img.small {
   width: 100%;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 20vw;
   width: 100%;
 }
 img.large {
@@ -285,5 +285,12 @@ img.large {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0;
+}
+
+.cart-container {
+  padding: 0 5vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=app.css.map */

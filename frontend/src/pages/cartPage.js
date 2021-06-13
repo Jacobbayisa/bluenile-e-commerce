@@ -27,7 +27,7 @@ const CartPage = (props) => {
     props.history.push("/signin?redirect=shipping");
   };
   return (
-    <div className="row top">
+    <div className="row top cart-container">
       <div className="col-2">
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
@@ -43,7 +43,7 @@ const CartPage = (props) => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="small"
+                      className="medium"
                     ></img>
                   </div>
                   <div className="min-30">
